@@ -9,4 +9,16 @@ git init .
 git remote add origin https://github.com/Global-Education-Observatory/baseline_models.git
 git pull origin master
 ```
-5. NMake a new folder for all of your model runs using: ```mkdir models```
+5. Make a new folder for all of your model runs using: ```mkdir models```
+6. Run: 
+```
+source "/usr/local/anaconda3-2021.05/etc/profile.d/conda.csh"
+module load anaconda3/2021.05
+module load openmpi/3.1.4/gcc-9.3.0
+unsetenv PYTHONPATH
+
+conda create -n geo
+```
+7. Then, pip install each of the pacakges in packages.txt
+8. Open train.py and change the username variable in line 28 to your W&M username
+9. To train the model, run: ```qsub job```

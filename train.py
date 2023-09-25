@@ -37,14 +37,6 @@ if __name__ == "__main__":
     
     print(image_names[0:5])
 
-
-    # dagas
-    
-    
-#     print(len(image_names))
-    
-# #     daga
-
     data = Dataloader(image_names, os.path.join(base_dir, "ph_hpc.json"), records_dir, batch_size = 32)
 
     device = "cpu"
